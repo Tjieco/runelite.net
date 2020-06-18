@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.2.18 Release - RuneLite</title><meta name="description" content="New grand exchange plugin, pyramid plunder plugin, and the cannon plugin now shows NPC double-hit spots"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var a={};i.search.slice(1).split("&").forEach((function(i){var l=i.split("=");a[l[0]]=l.slice(1).join("=").replace(/~and~/g,"&")})),void 0!==a.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(a.p||"")+(a.q?"?"+a.q:"")+i.hash)}}(window.location)</script><link href="/static/css/6.0d21f304.chunk.css" rel="stylesheet"><link href="/static/css/main.9a8828d0.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/static/css/4.cd725d85.chunk.css"><script charset="utf-8" src="/static/js/4.15634138.chunk.js"></script><script charset="utf-8" src="/static/js/27.ddcb02ec.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-dark"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/runelite_logo_transparent.png" class="icon" alt="RuneLite"> </a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features">Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog">Blog</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/pulse">Pulse</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki">Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown">API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/http-service/">RuneLite HTTP API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag">Tags</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/plugin-hub">Plugin Hub</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite">Become a patron</a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://runelite.net/discord" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button">Login</button></form></li></ul></div></nav><div class="container" id="layout"><section id="blog"><div class="content-section"><div class="page-header"><h1>1.2.18 Release</h1><p class="text-muted"><span title="Thu Mar 01 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">2 years ago</span> by Adam</p></div><div class="markdown-body news-page"><div><p>A grand exchange plugin has been added by
+<a href="https://github.com/someonewithaninternetconnection" native="">@Someonewithaninternetconnection</a>.
+It shows your current grand exchange offers and their progress:</p>
+<p><img src="/img/blog/1.2.18-Release/ge.png" alt="ge"></p>
+<p><a href="https://github.com/NotFoxtrot" native="">@NotFoxtrot</a> contributed a pyramid plunder plugin which uses a less obtrusive interface:</p>
+<p><img src="/img/blog/1.2.18-Release/pp.png" alt="pp"></p>
+<p>Finally, the cannon plugin was extended by <a href="https://github.com/SemtexError" native="">@SemtexError</a> to show the NPC double-hit spots:</p>
+<p><img src="/img/blog/1.2.18-Release/cannon.png" alt="cannon"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>TzTok-Jad overlay is now shown for the whole fight duration</li>
+<li>The puzzle solver now displays the fastest solution</li>
+<li>Add Dorgesh-Kaan and Brimhaven agility arenas to the agility plugin</li>
+<li>Show skill details on hover instead of click in the hiscore panel</li>
+<li>Maniacal monkeys have been added to the hunter plugin</li>
+<li>Hunter plugin was improved to be more accurate, and catch rate overlay was removed</li>
+<li>Fullscreen support has been added for OSX</li>
+<li>Achievement diary plugin has been removed in favour of new OSRS achievement diary interface</li>
+<li>World map has been fixed, no more increased memory consumption after it is closed</li>
+<li>Positive and negative boosts are now properly colored when using absolute boosts</li>
+<li>Cannonball plugin now supports unloading</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3>New commits</h3>
+<p>We had 15 contributors this release!</p>
+<pre><code>Adam (16):
+      overlay renderer: remove unnecessary lambda which makes it hard to profile
+      xtea service: fix get() query to join on id
+      Revert "xtea service: fix get() query to join on id"
+      xtea service:try to fix query again
+      runescape-client: refactor WorldMapManager
+      runescape-api: import world map data
+      runelite-api: expose world map data
+      Garbage collect world map once closed
+      menu manager: add method to remove player menu items
+      hiscore plugin: remove player option on shutdown
+      hiscore plugin: add config for player option
+      text component: allow color tags
+      boosts overlay: show boosts in color
+      attack indicator plugin: process hidden styles on startup/shutdown and config changes
+      mixin injector: fall back to method name if no deobfuscated name is found
+      Add support for intercepting mouse and keyboard input
+
+Devin (1):
+      Change TzTok-Jad overlay to be persistent
+
+Hexagon (1):
+      Use the address returned by the worldlist api instead of building our own
+
+Joshua Filby (1):
+      runescape-client: set the close operation for running deob client to exit on close
+
+Kamiel (6):
+      Fix minor issues
+      Add ability to set custom colors
+      Fix overlays not being rendered
+      Follow java coding conventions
+      Use normal font weight for input field
+      Fix panel expanding inconsistency (#464)
+
+Lotto (21):
+      grounditems: offset text on z axis
+      puzzlesolver: add IDA* + manhattan distance solver
+      puzzlesolver: don't spit out exceptions when the puzzle is finished
+      puzzlesolver: use the new solver and display Solving.. + Solved! msgs
+      puzzlesolver: update the test to use the new solver
+      puzzlesolver: add an option to draw dots instead of arrows
+      puzzlesolver: fix solution being reset when clicking the puzzle quickly
+      puzzlesolver: remove bounds check from PuzzleSolver#getStep
+      Fix Widget#isHidden returning incorrect state when parent is null
+      Add grand exchange support to InventoryWidgetItemQuery
+      Add varbit for multicombat area
+      opponentinfo: display the name of the target of your target
+      examineplugin: only capture menuactions with the option "Examine"
+      notifier: add option to disable notification sounds
+      Add guide prices support to InventoryWidgetItemQuery
+      Add equipment window support to InventoryWidgetItemQuery
+      modelmixin: use verticesCount/trianglesCount instead of array lengths
+      agilityplugin: add support for Dorgesh-Kaan
+      agilityplugin: add support for Brimhaven
+      hiscoreplugin: show skill details on hover instead of click
+      runelite-client: remove diary progress plugin
+
+Max Weber (30):
+      cameraPitch &gt; cameraPitchCopy
+      field885 &gt; cameraPitch
+      method2995 &gt; buildVisibilityMaps
+      zoom plugin: Add option to relax the camera's upper pitch limit.
+      cache: Add get_is_mobile opcode.
+      cameraPitch &gt; cameraPitchTarget
+      cameraPitchCopy &gt; cameraPitch
+      method565 &gt; drawMapIcons
+      method564 &gt; drawMapRegion
+      field3927 &gt; worldMapX
+      field3944 &gt; worldMapY
+      field3947 &gt; worldMapZoom
+      field3948 &gt; worldMapZoomTarget
+      method385 &gt; drawFlashingMapIcons
+      method406 &gt; drawMapLinks
+      method402 &gt; drawNonLinkMapIcons
+      class39 &gt; MapIcon
+      method4375 &gt; bitpack
+      class47 &gt; MapIconReference
+      field3406 &gt; id
+      field488 &gt; areaId
+      field556 &gt; areaId
+      field3788 &gt; scriptMapIconReference
+      class33 &gt; MapLabel
+      field433 &gt; fontSize
+      field3935 &gt; mapFonts
+      field515 &gt; mapFonts
+      field450 &gt; mapFonts
+      method648 &gt; popcnt
+      field431 &gt; text
+
+NotFoxtrot (2):
+      Add Pharaoh's sceptre to the jewellery count
+      Add new overlay for Pyramid Plunder
+
+Seth (5):
+      boss timers: replace resource image with itemID images
+      boss timers: add tooltips
+      boss timers: add chaos elemental
+      image component: fix images being off-centered
+      poh plugin: Remove unnecessary toggles
+
+SomeoneWithAnInternetConnection (4):
+      Expose isStackable on ItemComposition objects
+      Rename progress to state in GrandExchangeOffer
+      runelite-api: Add Grand Exchange offer support
+      Create Grand Exchange plugin
+
+Tomas Slusny (9):
+      Prevent throwing duplacite events for GameObject
+      Add support for maniacal monkeys to hunter plugin
+      Add default timeout to notify-send on Linux
+      Rename "Low memory" to "Low detail" plugin
+      Fix crash in ClienUI configChanged event
+      Fix NPE in minimap plugin
+      Remove animation checks
+      Remove catch rate overlay
+      Remove inSequence import b/c problems with mapping
+
+XrioBtw (1):
+      Add missing cancel menu action
+
+arlyon (2):
+      runelite-client: split ostype into its own utility
+      runelite-client: enable fullscreen on osx
+
+l2- (1):
+      Xp orb fixes (#689)
+
+semtexerror (4):
+      cannon plugin: support unloading cannon
+      cannon plugin: cleanup
+      cannon plugin: add overlay for cannonballs left
+      cannon plugin: draw npc double hit spots
+</code></pre>
+</div></div></div></section><section id="footer"><div class="content-section"><footer><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></footer></div></section></div></div></div><script>!function(e){function c(c){for(var d,t,n=c[0],o=c[1],u=c[2],b=0,l=[];b<n.length;b++)t=n[b],Object.prototype.hasOwnProperty.call(r,t)&&r[t]&&l.push(r[t][0]),r[t]=0;for(d in o)Object.prototype.hasOwnProperty.call(o,d)&&(e[d]=o[d]);for(i&&i(c);l.length;)l.shift()();return a.push.apply(a,u||[]),f()}function f(){for(var e,c=0;c<a.length;c++){for(var f=a[c],d=!0,t=1;t<f.length;t++){var o=f[t];0!==r[o]&&(d=!1)}d&&(a.splice(c--,1),e=n(n.s=f[0]))}return e}var d={},t={1:0},r={1:0},a=[];function n(c){if(d[c])return d[c].exports;var f=d[c]={i:c,l:!1,exports:{}};return e[c].call(f.exports,f,f.exports,n),f.l=!0,f.exports}n.e=function(e){var c=[];t[e]?c.push(t[e]):0!==t[e]&&{3:1,4:1,5:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1}[e]&&c.push(t[e]=new Promise((function(c,f){for(var d="static/css/"+({}[e]||e)+"."+{2:"31d6cfe0",3:"6852b41e",4:"cd725d85",5:"cd725d85",7:"5a082f60",8:"93df7b57",9:"ff053ced",10:"e181796d",11:"b9c448b7",12:"68f5ba8f",13:"17045963",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",85:"31d6cfe0",86:"31d6cfe0",87:"31d6cfe0",88:"31d6cfe0",89:"31d6cfe0",90:"31d6cfe0",91:"31d6cfe0",92:"31d6cfe0",93:"31d6cfe0",94:"31d6cfe0",95:"31d6cfe0",96:"31d6cfe0",97:"31d6cfe0",98:"31d6cfe0",99:"31d6cfe0",100:"31d6cfe0",101:"31d6cfe0",102:"31d6cfe0",103:"31d6cfe0",104:"31d6cfe0",105:"31d6cfe0",106:"31d6cfe0",107:"31d6cfe0",108:"31d6cfe0",109:"31d6cfe0",110:"31d6cfe0",111:"31d6cfe0",112:"31d6cfe0",113:"31d6cfe0",114:"31d6cfe0",115:"31d6cfe0",116:"31d6cfe0",117:"31d6cfe0",118:"31d6cfe0",119:"31d6cfe0",120:"31d6cfe0",121:"31d6cfe0",122:"31d6cfe0",123:"31d6cfe0",124:"31d6cfe0",125:"31d6cfe0",126:"31d6cfe0"}[e]+".chunk.css",r=n.p+d,a=document.getElementsByTagName("link"),o=0;o<a.length;o++){var u=(i=a[o]).getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(u===d||u===r))return c()}var b=document.getElementsByTagName("style");for(o=0;o<b.length;o++){var i;if((u=(i=b[o]).getAttribute("data-href"))===d||u===r)return c()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=c,l.onerror=function(c){var d=c&&c.target&&c.target.src||r,a=new Error("Loading CSS chunk "+e+" failed.\n("+d+")");a.code="CSS_CHUNK_LOAD_FAILED",a.request=d,delete t[e],l.parentNode.removeChild(l),f(a)},l.href=r,document.getElementsByTagName("head")[0].appendChild(l)})).then((function(){t[e]=0})));var f=r[e];if(0!==f)if(f)c.push(f[2]);else{var d=new Promise((function(c,d){f=r[e]=[c,d]}));c.push(f[2]=d);var a,o=document.createElement("script");o.charset="utf-8",o.timeout=120,n.nc&&o.setAttribute("nonce",n.nc),o.src=function(e){return n.p+"static/js/"+({}[e]||e)+"."+{2:"8d98d8e9",3:"5af4e0ad",4:"15634138",5:"3bce278d",7:"d0a2e872",8:"d622e6b6",9:"296e6e26",10:"be237ca8",11:"f9d52b05",12:"63432280",13:"daa5b256",14:"1fee4ba2",15:"5df5844f",16:"fa75dee9",17:"3708c751",18:"135a3ece",19:"95cec576",20:"88d1aefc",21:"5dac8f6d",22:"aeac335f",23:"c64b6e43",24:"d1a88946",25:"8cccb36f",26:"35df94ca",27:"ddcb02ec",28:"67c7533f",29:"87c0f582",30:"1dd0a638",31:"16d7c0fe",32:"6ad49285",33:"50e6c476",34:"e2b8d3a1",35:"50583a36",36:"376e3e2f",37:"195410fc",38:"56f0b37b",39:"7e1662f9",40:"91ad9e19",41:"33e8e4c3",42:"878a935f",43:"c07bb466",44:"47b1eafb",45:"87e28704",46:"f0651916",47:"ee7a4223",48:"54a1eb95",49:"59de039e",50:"1107b8fd",51:"a4fc72c1",52:"c44bc320",53:"f00adde7",54:"19cc230f",55:"5bfa5563",56:"61da124f",57:"8a8bb620",58:"a70ff402",59:"10dbc736",60:"a7420bc1",61:"48612fcb",62:"76b24441",63:"7eb13def",64:"b0298fe6",65:"b27da8f2",66:"43e4465a",67:"eb47d02a",68:"c9ddbc41",69:"ae5fa912",70:"c4638395",71:"e97dc7c2",72:"3cfc8903",73:"63525ffb",74:"2f80df35",75:"4e201720",76:"a27c2033",77:"63663381",78:"4207c1e1",79:"9d36f05a",80:"84ce844a",81:"77a70840",82:"e5e0bd22",83:"39f4cbf8",84:"5ef8bee8",85:"e07de044",86:"bc084d86",87:"6d206f13",88:"1968b3c4",89:"5697996f",90:"13e4d5f8",91:"2f526284",92:"fa6cfe34",93:"8602ad42",94:"8473d605",95:"03447ddb",96:"637d2a6c",97:"becea50c",98:"09c5162d",99:"0ee32773",100:"cd703052",101:"6a02e7ed",102:"1371e36b",103:"1bf89b68",104:"1a21d1b1",105:"eecfae90",106:"e99e054f",107:"deb83313",108:"edab867b",109:"9bbf822a",110:"dfcc9d6b",111:"b84af985",112:"92f88891",113:"cff17f39",114:"dddd9a76",115:"5a5d5a31",116:"6a22e7cf",117:"62d3512d",118:"eebeba53",119:"1742d817",120:"026edcd6",121:"ec2fa1ea",122:"a9a839fd",123:"bb0c627f",124:"95358557",125:"21a368ea",126:"71ee7d6b"}[e]+".chunk.js"}(e);var u=new Error;a=function(c){o.onerror=o.onload=null,clearTimeout(b);var f=r[e];if(0!==f){if(f){var d=c&&("load"===c.type?"missing":c.type),t=c&&c.target&&c.target.src;u.message="Loading chunk "+e+" failed.\n("+d+": "+t+")",u.name="ChunkLoadError",u.type=d,u.request=t,f[1](u)}r[e]=void 0}};var b=setTimeout((function(){a({type:"timeout",target:o})}),12e4);o.onerror=o.onload=a,document.head.appendChild(o)}return Promise.all(c)},n.m=e,n.c=d,n.d=function(e,c,f){n.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,c){if(1&c&&(e=n(e)),8&c)return e;if(4&c&&"object"==typeof e&&e&&e.__esModule)return e;var f=Object.create(null);if(n.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:e}),2&c&&"string"!=typeof e)for(var d in e)n.d(f,d,function(c){return e[c]}.bind(null,d));return f},n.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(c,"a",c),c},n.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},n.p="/",n.oe=function(e){throw console.error(e),e};var o=this["webpackJsonprunelite.net"]=this["webpackJsonprunelite.net"]||[],u=o.push.bind(o);o.push=c,o=o.slice();for(var b=0;b<o.length;b++)c(o[b]);var i=u;f()}([])</script><script src="/static/js/6.008543b5.chunk.js"></script><script src="/static/js/main.b4bd333d.chunk.js"></script></body></html>

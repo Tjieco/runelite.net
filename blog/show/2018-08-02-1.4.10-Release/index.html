@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.10 Release - RuneLite</title><meta name="description" content="Loot tracker, minnows overlay, prayer bar flick helper and bug fixes"><meta name="author" content="Tomas"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var a={};i.search.slice(1).split("&").forEach((function(i){var l=i.split("=");a[l[0]]=l.slice(1).join("=").replace(/~and~/g,"&")})),void 0!==a.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(a.p||"")+(a.q?"?"+a.q:"")+i.hash)}}(window.location)</script><link href="/static/css/6.0d21f304.chunk.css" rel="stylesheet"><link href="/static/css/main.9a8828d0.chunk.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/static/css/4.cd725d85.chunk.css"><script charset="utf-8" src="/static/js/4.15634138.chunk.js"></script><script charset="utf-8" src="/static/js/53.f00adde7.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-dark"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/runelite_logo_transparent.png" class="icon" alt="RuneLite"> </a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features">Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog">Blog</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/pulse">Pulse</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki">Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown">API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/http-service/">RuneLite HTTP API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag">Tags</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/plugin-hub">Plugin Hub</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite">Become a patron</a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://runelite.net/discord" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link nav-icon" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button">Login</button></form></li></ul></div></nav><div class="container" id="layout"><section id="blog"><div class="content-section"><div class="page-header"><h1>1.4.10 Release</h1><p class="text-muted"><span title="Thu Aug 02 2018 10:00:00 GMT+0000 (Coordinated Universal Time)">2 years ago</span> by Tomas</p></div><div class="markdown-body news-page"><div><p>A loot tracker plugin has been added which will be able to track your loot from:</p>
+<ul>
+<li>Monsters</li>
+<li>Bosses (like Vorkath and Zulrah)</li>
+<li>Clue scrolls</li>
+<li>Chambers of Xeric</li>
+<li>Theatre of Blood</li>
+<li>Barrows Brothers</li>
+<li>Players you PK (!)</li>
+</ul>
+<p>For now, all these data will be tracked only per-session and not persisted and there is only per-kill view,
+but we are planning to extend both these areas in future. This plugin is disabled by default, so make sure
+to enable it in settings under <strong>Loot tracker</strong>.</p>
+<p>This feature is result of hard work of <a href="https://github.com/WooxSolo" native="">@WooxSolo</a>, <a href="https://github.com/Adam-" native="">@Adam-</a>,
+<a href="https://github.com/TheStonedTurtle" native="">@TheStonedTurtle</a> and <a href="https://github.com/Psikoi" native="">@Psikoi</a>, so thank you all for
+your great work on it:</p>
+<p><img src="/img/blog/1.4.10-Release/loottracker1.png" alt="loottracker1">
+<img src="/img/blog/1.4.10-Release/loottracker2.png" alt="loottracker2">
+<img src="/img/blog/1.4.10-Release/loottracker3.png" alt="loottracker3">
+<img src="/img/blog/1.4.10-Release/loottracker4.png" alt="loottracker4"></p>
+<p>Support for minnows timers has been added to the Fishing plugin which displays a countdown until the minnow spot will
+move. Thanks to <a href="https://github.com/jkybtw" native="">@jkybtw</a> who contributed this feature.</p>
+<p><img src="/img/blog/1.4.10-Release/minnows.png" alt="minnows"></p>
+<p>The flicking helper in Prayer plugin has been extended to also display in prayer bar, if it is enabled, thanks to
+<a href="https://github.com/forsco" native="">@forsco</a>:</p>
+<p><img src="/img/blog/1.4.10-Release/prayerbarflick.gif" alt="prayerbarflick"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Ungael (Vorkath) obstacles has been added to agility plugin</li>
+<li>Meyerditch obstacles has been added to agility plugin</li>
+<li>Fairy ring clues will now warn about missing spade from inventory</li>
+<li>Lumbridge swamp emote clue now shows correct location</li>
+<li>Loading of window sidebar has been fixed, now it should not mysteriously disappear anymore</li>
+<li>Dig location for Barbarian Villag Hot&amp;Cold clue is now correct</li>
+<li>Idle notifier now notify on crafting leather idle</li>
+<li>Requirement for slaying an Abyssal Demon corrected in Achievement Diary
+plugin</li>
+<li>Fix tile overlay height when highlighting a tile next to the edge of a bridge</li>
+<li>Add config for whether the killcount command is enabled</li>
+<li>Fix minimap overlay dot overlay being slightly off</li>
+<li>Crafting leather has been added to the idle notifier</li>
+</ul>
+<p>Enjoy!</p>
+<p>~ Tomas</p>
+<h3>New commits</h3>
+<p>We had 18 contributors this release!</p>
+<pre><code>Adam (12):
+      perspective: fix worldToCanvas to convert from local to scene coords correctly
+      Revert "perspective: fix worldToCanvas to convert from local to scene coords correctly"
+      perspective: use less magic constants in getTileHeight
+      Revert "perspective: fix regression caused by 2599db2"
+      perspective: split tile height logic out of local to world
+      perspective: fix getCanvasTileAreaPoly when getting tile next to a bridge
+      perspective: fix checkstyle
+      runelite-mixins: correct worldToCanvas arguments
+      perspective: change worldToMinimap location calculation back
+      fishing plugin: add minnows overlay
+      fishing plugin: add position to config
+      Add LootManager
+
+Devin (1):
+      kourend library plugin: Use correct enum naming convention
+
+Jacob McElroy (1):
+      Fix dig location of the West Barbarian Village H/C clue (#4524)
+
+Jaimy Smets (1):
+      Add alternative dragon pickaxes to emote clue
+
+Jordan Atwood (23):
+      item charge plugin: Use constant for checked string
+      timers plugin: Use constants for checked strings
+      Add color utility class
+      notifier: Use ColorUtil functions
+      chat message manager: Use ColorUtil functions
+      widget menu option: Use ColorUtil functions
+      achievement diary plugin: Use ColorUtil functions
+      boosts plugin: Use ColorUtil functions
+      friend notes plugin: Use ColorUtil functions
+      ground items plugin: Use ColorUtil functions
+      inventory tags plugin: Use ColorUtil functions
+      item prices plugin: Use ColorUtil functions
+      item stats plugin: Use ColorUtil functions
+      menu entry swapper plugin: Use ColorUtil functions
+      player indicators plugin: Use ColorUtil functions
+      puzzle solver plugin: Use ColorUtil functions
+      rune pouch plugin: Use ColorUtil functions
+      slayer plugin: Use ColorUtil functions
+      achievement diary plugin: Fix Abyssal demon req
+      achievement diary plugin: Fix Belladonna farming req
+      achievement diary plugin: Fix waka canoe requirement
+      clues: Fix Lumbridge swamp cave emote clue location
+      agility: Add Ungael obstacles
+
+Juul Damen (1):
+      Add missing killcount command config (#4489)
+
+Kristian Welsh (1):
+      overlay util: adjust renderMinimapLocation for newer worldToMinimap
+
+Magic fTail (3):
+      TimerPlugin: Fix prayer enhance length
+      Clarify wording of default log tracker message (#4602)
+      Fix Theatre Of Blood InventoryID (#4608)
+
+Max Weber (5):
+      mixins: Prevent runScript from being called recursively
+      runelite-client: Rename ClientThread::invokeLater to invoke
+      runelite-client: Always call done after changed in ChatboxInptutManager
+      fairyring: Always run scripts outside of chatbox input callbacks
+      runelite-client: Make hotkeys run on KeyPressed
+
+Michael Goodwin (3):
+      Add Chambers Of Xeric and TOB inventories
+      Add TOB varbits
+      Add TOB widget ids
+
+Mitch Barnett (1):
+      Add Meyerditch to agility obstacles (#4538)
+
+Su-Shing Chen (1):
+      Fix Assembler tests when autocrlf=true on Windows
+
+Tomas Slusny (12):
+      Fix loading of chat colors on startup
+      Use consistent API and order for title and sides
+      Add isTab property to title buttons
+      Merge PluginToolbar and TitleToolbar together
+      Add simple info log with startup time
+      Properly use javax.inject.Provider
+      Pack and show frame only after properties update
+      Fix NPE when trying to draw null names
+      Add null check for Perspective.getCanvasTextLoc
+      Account for plane in TileObject canvas location
+      Fix FontManagerTest package
+      Fix getCanvasTileAreaPoly ArrayOutOfBounds
+
+WooxSolo (1):
+      Add NPC death animations
+
+aquivers (1):
+      Add spade requirement reminder to fairy ring clues (#4585)
+
+forsco (1):
+      Add flick helper to player bar (#3882)
+
+psikoi (1):
+      Add loot tracker plugin
+
+rswindows10 (2):
+      Add support for crafting leather idle notification (#4600)
+      Remove comment regarding crafting leather (#4601)
+</code></pre>
+</div></div></div></section><section id="footer"><div class="content-section"><footer><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></footer></div></section></div></div></div><script>!function(e){function c(c){for(var d,t,n=c[0],o=c[1],u=c[2],b=0,l=[];b<n.length;b++)t=n[b],Object.prototype.hasOwnProperty.call(r,t)&&r[t]&&l.push(r[t][0]),r[t]=0;for(d in o)Object.prototype.hasOwnProperty.call(o,d)&&(e[d]=o[d]);for(i&&i(c);l.length;)l.shift()();return a.push.apply(a,u||[]),f()}function f(){for(var e,c=0;c<a.length;c++){for(var f=a[c],d=!0,t=1;t<f.length;t++){var o=f[t];0!==r[o]&&(d=!1)}d&&(a.splice(c--,1),e=n(n.s=f[0]))}return e}var d={},t={1:0},r={1:0},a=[];function n(c){if(d[c])return d[c].exports;var f=d[c]={i:c,l:!1,exports:{}};return e[c].call(f.exports,f,f.exports,n),f.l=!0,f.exports}n.e=function(e){var c=[];t[e]?c.push(t[e]):0!==t[e]&&{3:1,4:1,5:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1}[e]&&c.push(t[e]=new Promise((function(c,f){for(var d="static/css/"+({}[e]||e)+"."+{2:"31d6cfe0",3:"6852b41e",4:"cd725d85",5:"cd725d85",7:"5a082f60",8:"93df7b57",9:"ff053ced",10:"e181796d",11:"b9c448b7",12:"68f5ba8f",13:"17045963",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",85:"31d6cfe0",86:"31d6cfe0",87:"31d6cfe0",88:"31d6cfe0",89:"31d6cfe0",90:"31d6cfe0",91:"31d6cfe0",92:"31d6cfe0",93:"31d6cfe0",94:"31d6cfe0",95:"31d6cfe0",96:"31d6cfe0",97:"31d6cfe0",98:"31d6cfe0",99:"31d6cfe0",100:"31d6cfe0",101:"31d6cfe0",102:"31d6cfe0",103:"31d6cfe0",104:"31d6cfe0",105:"31d6cfe0",106:"31d6cfe0",107:"31d6cfe0",108:"31d6cfe0",109:"31d6cfe0",110:"31d6cfe0",111:"31d6cfe0",112:"31d6cfe0",113:"31d6cfe0",114:"31d6cfe0",115:"31d6cfe0",116:"31d6cfe0",117:"31d6cfe0",118:"31d6cfe0",119:"31d6cfe0",120:"31d6cfe0",121:"31d6cfe0",122:"31d6cfe0",123:"31d6cfe0",124:"31d6cfe0",125:"31d6cfe0",126:"31d6cfe0"}[e]+".chunk.css",r=n.p+d,a=document.getElementsByTagName("link"),o=0;o<a.length;o++){var u=(i=a[o]).getAttribute("data-href")||i.getAttribute("href");if("stylesheet"===i.rel&&(u===d||u===r))return c()}var b=document.getElementsByTagName("style");for(o=0;o<b.length;o++){var i;if((u=(i=b[o]).getAttribute("data-href"))===d||u===r)return c()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=c,l.onerror=function(c){var d=c&&c.target&&c.target.src||r,a=new Error("Loading CSS chunk "+e+" failed.\n("+d+")");a.code="CSS_CHUNK_LOAD_FAILED",a.request=d,delete t[e],l.parentNode.removeChild(l),f(a)},l.href=r,document.getElementsByTagName("head")[0].appendChild(l)})).then((function(){t[e]=0})));var f=r[e];if(0!==f)if(f)c.push(f[2]);else{var d=new Promise((function(c,d){f=r[e]=[c,d]}));c.push(f[2]=d);var a,o=document.createElement("script");o.charset="utf-8",o.timeout=120,n.nc&&o.setAttribute("nonce",n.nc),o.src=function(e){return n.p+"static/js/"+({}[e]||e)+"."+{2:"8d98d8e9",3:"5af4e0ad",4:"15634138",5:"3bce278d",7:"d0a2e872",8:"d622e6b6",9:"296e6e26",10:"be237ca8",11:"f9d52b05",12:"63432280",13:"daa5b256",14:"1fee4ba2",15:"5df5844f",16:"fa75dee9",17:"3708c751",18:"135a3ece",19:"95cec576",20:"88d1aefc",21:"5dac8f6d",22:"aeac335f",23:"c64b6e43",24:"d1a88946",25:"8cccb36f",26:"35df94ca",27:"ddcb02ec",28:"67c7533f",29:"87c0f582",30:"1dd0a638",31:"16d7c0fe",32:"6ad49285",33:"50e6c476",34:"e2b8d3a1",35:"50583a36",36:"376e3e2f",37:"195410fc",38:"56f0b37b",39:"7e1662f9",40:"91ad9e19",41:"33e8e4c3",42:"878a935f",43:"c07bb466",44:"47b1eafb",45:"87e28704",46:"f0651916",47:"ee7a4223",48:"54a1eb95",49:"59de039e",50:"1107b8fd",51:"a4fc72c1",52:"c44bc320",53:"f00adde7",54:"19cc230f",55:"5bfa5563",56:"61da124f",57:"8a8bb620",58:"a70ff402",59:"10dbc736",60:"a7420bc1",61:"48612fcb",62:"76b24441",63:"7eb13def",64:"b0298fe6",65:"b27da8f2",66:"43e4465a",67:"eb47d02a",68:"c9ddbc41",69:"ae5fa912",70:"c4638395",71:"e97dc7c2",72:"3cfc8903",73:"63525ffb",74:"2f80df35",75:"4e201720",76:"a27c2033",77:"63663381",78:"4207c1e1",79:"9d36f05a",80:"84ce844a",81:"77a70840",82:"e5e0bd22",83:"39f4cbf8",84:"5ef8bee8",85:"e07de044",86:"bc084d86",87:"6d206f13",88:"1968b3c4",89:"5697996f",90:"13e4d5f8",91:"2f526284",92:"fa6cfe34",93:"8602ad42",94:"8473d605",95:"03447ddb",96:"637d2a6c",97:"becea50c",98:"09c5162d",99:"0ee32773",100:"cd703052",101:"6a02e7ed",102:"1371e36b",103:"1bf89b68",104:"1a21d1b1",105:"eecfae90",106:"e99e054f",107:"deb83313",108:"edab867b",109:"9bbf822a",110:"dfcc9d6b",111:"b84af985",112:"92f88891",113:"cff17f39",114:"dddd9a76",115:"5a5d5a31",116:"6a22e7cf",117:"62d3512d",118:"eebeba53",119:"1742d817",120:"026edcd6",121:"ec2fa1ea",122:"a9a839fd",123:"bb0c627f",124:"95358557",125:"21a368ea",126:"71ee7d6b"}[e]+".chunk.js"}(e);var u=new Error;a=function(c){o.onerror=o.onload=null,clearTimeout(b);var f=r[e];if(0!==f){if(f){var d=c&&("load"===c.type?"missing":c.type),t=c&&c.target&&c.target.src;u.message="Loading chunk "+e+" failed.\n("+d+": "+t+")",u.name="ChunkLoadError",u.type=d,u.request=t,f[1](u)}r[e]=void 0}};var b=setTimeout((function(){a({type:"timeout",target:o})}),12e4);o.onerror=o.onload=a,document.head.appendChild(o)}return Promise.all(c)},n.m=e,n.c=d,n.d=function(e,c,f){n.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,c){if(1&c&&(e=n(e)),8&c)return e;if(4&c&&"object"==typeof e&&e&&e.__esModule)return e;var f=Object.create(null);if(n.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:e}),2&c&&"string"!=typeof e)for(var d in e)n.d(f,d,function(c){return e[c]}.bind(null,d));return f},n.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(c,"a",c),c},n.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},n.p="/",n.oe=function(e){throw console.error(e),e};var o=this["webpackJsonprunelite.net"]=this["webpackJsonprunelite.net"]||[],u=o.push.bind(o);o.push=c,o=o.slice();for(var b=0;b<o.length;b++)c(o[b]);var i=u;f()}([])</script><script src="/static/js/6.008543b5.chunk.js"></script><script src="/static/js/main.b4bd333d.chunk.js"></script></body></html>
